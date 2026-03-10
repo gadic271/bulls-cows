@@ -1,4 +1,4 @@
-const API_BASE = 'http://localhost:5500/api/game';
+const API_BASE = 'http://localhost:8081/api/game';
 
 const guessInput = document.getElementById('guessInput');
 const guessBtn = document.getElementById('guessBtn');

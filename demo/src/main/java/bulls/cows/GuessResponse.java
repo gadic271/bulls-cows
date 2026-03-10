@@ -14,4 +14,19 @@ public class GuessResponse {
     }
 
 
+    public int getBulls() {
+        return bulls;
+    }
+
+    public int getCows() {
+        return cows;
+    }
+
+    public boolean isGameOver() {
+        return gameOver;
+    }
+
+    public String getMessage() {
+        return message;
+    }
 }
