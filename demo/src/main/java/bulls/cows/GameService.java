@@ -1,7 +1,5 @@
 package bulls.cows;
 
-
-import com.example.bullsandcows.model.GuessResponse;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -25,7 +23,7 @@ public class GameService {
         for (int i = 0; i < 4; i++) sb.append(digits.get(i));
         secret = sb.toString();
         gameActive = true;
-        System.out.println("New secret: " + secret); // для отладки
+        System.out.println("New secret: " + secret);
     }
 
     public GuessResponse checkGuess(String guess) {
@@ -39,7 +37,6 @@ public class GameService {
         boolean[] secretUsed = new boolean[4];
         boolean[] guessUsed = new boolean[4];
 
-        // быки
         for (int i = 0; i < 4; i++) {
             if (secret.charAt(i) == guess.charAt(i)) {
                 bulls++;
@@ -48,7 +45,6 @@ public class GameService {
             }
         }
 
-        // коровы
         for (int i = 0; i < 4; i++) {
             if (guessUsed[i]) continue;
             for (int j = 0; j < 4; j++) {

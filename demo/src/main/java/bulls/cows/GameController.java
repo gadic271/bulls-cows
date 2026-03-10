@@ -1,14 +1,12 @@
 package bulls.cows;
 
-import com.example.bullsandcows.model.GuessRequest;
-import com.example.bullsandcows.model.GuessResponse;
-import com.example.bullsandcows.service.GameService;
+
 import jakarta.validation.Valid;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/game")
-@CrossOrigin(origins = "http://localhost:8080") // для разработки
+@CrossOrigin(origins = "http://localhost:5500")
 public class GameController {
 
     private final GameService gameService;
